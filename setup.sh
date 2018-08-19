@@ -11,7 +11,7 @@
 # Add user to sudoers
 
 # Install git, zsh, neovim, qemu-kvm
-yes | sudo apt install git zsh curl neovim qemu-kvm
+sudo apt install git zsh curl neovim qemu-kvm -y
 
 # Set neovim as default editor
 sudo update-alternatives --config editor
@@ -25,8 +25,8 @@ sudo adduser $USER kvm
 # Git configuration
 read -p "Enter your name for a Git account: " gitname
 read -p "Enter your email for a Git account: " gitemail
-git config --global user.name gitname
-git config --global user.email gitemail
+git config --global user.name $gitname
+git config --global user.email $gitemail
 
 # Install Oh My Zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
