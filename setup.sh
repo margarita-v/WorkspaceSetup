@@ -35,8 +35,7 @@ git config --global user.name $gitname
 git config --global user.email $gitemail
 
 # Install Oh My Zsh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh && \
-    chmod 755 export-variables.sh; ./export-variables.sh)"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
 # Setup SSH for a Git account
 # ssh-keygen
