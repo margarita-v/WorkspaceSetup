@@ -1,7 +1,7 @@
-g#!/bin/bash
+#!/bin/bash
 
 # Setup environment variables
-ENVIRONMENT_VARIABLES="JAVA_HOME=/usr/bin/java \
+ENVIRONMENT_VARIABLES="JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64/ \
     GRADLE_HOME=/opt/gradle/gradle-5.0/bin \
     ANDROID_HOME=~/Android/Sdk \
     EMULATOR_HOME=\$ANDROID_HOME/emulator \
