@@ -22,15 +22,15 @@ sudo unzip -d /opt/gradle gradle-5.0-bin.zip
 rm -rf gradle-5.0-bin.zip
 
 # Install Visual Studio Code
-sudo apt install software-properties-common apt-transport-https
+sudo apt install software-properties-common apt-transport-https -y
 wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add -
 sudo add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main"
-sudo apt install code
+sudo apt install code -y
+sudo apt autoremove -y
 
 # Set neovim as default editor
-sudo update-alternatives --config editor
-# or add to ~/.profile:
-# export EDITOR=nvim
+sudo update-alternatives --install /usr/bin/editor editor /usr/bin/vim 100
+# or sudo update-alternatives --config editor
 
 # Grant permission to /dev/kvm. Log out and restart after this command
 # sudo usermod -aG sudo $USER
