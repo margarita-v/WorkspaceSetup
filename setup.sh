@@ -10,8 +10,14 @@
 
 # Add user to sudoers
 
-# Install git, zsh, neovim, qemu-kvm
-sudo apt install git zsh curl neovim qemu-kvm -y
+# Install git, zsh, neovim, qemu-kvm, java8, aapt
+sudo apt install git zsh curl neovim qemu-kvm openjdk-8-jdk aapt -y
+
+# Install and setup gradle
+wget https://services.gradle.org/distributions/gradle-5.0-bin.zip
+sudo mkdir /opt/gradle
+sudo unzip -d /opt/gradle gradle-5.0-bin.zip
+rm -rf gradle-5.0-bin.zip
 
 # Set neovim as default editor
 sudo update-alternatives --config editor
@@ -30,6 +36,23 @@ git config --global user.email $gitemail
 
 # Install Oh My Zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
+chsh -s $(which zsh)
+
+# Setup environment variables
+ENVIRONMENT_VARIABLES="JAVA_HOME=/usr/bin/java \
+    GRADLE_HOME=/opt/gradle/gradle-5.0/bin \
+    ANDROID_HOME=~/Android/Sdk \
+    EMULATOR_HOME=\$ANDROID_HOME/emulator \
+    EMULATOR_TOOLS_HOME=\$ANDROID_HOME/tools \
+    AVDMANAGER_HOME=\$EMULATOR_TOOLS_HOME/bin \
+    PATH=\$PATH:\$JAVA_HOME:\$GRADLE_HOME:\$EMULATOR_HOME:\$EMULATOR_TOOLS_HOME:\$AVDMANAGER_HOME"
+
+for variable in ${ENVIRONMENT_VARIABLES}; do
+    echo export $variable >> .zshrc
+done
+
+source ~/.zshrc
 
 # Setup SSH for a Git account
 # ssh-keygen
