@@ -35,24 +35,8 @@ git config --global user.name $gitname
 git config --global user.email $gitemail
 
 # Install Oh My Zsh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-
-chsh -s $(which zsh)
-
-# Setup environment variables
-ENVIRONMENT_VARIABLES="JAVA_HOME=/usr/bin/java \
-    GRADLE_HOME=/opt/gradle/gradle-5.0/bin \
-    ANDROID_HOME=~/Android/Sdk \
-    EMULATOR_HOME=\$ANDROID_HOME/emulator \
-    EMULATOR_TOOLS_HOME=\$ANDROID_HOME/tools \
-    AVDMANAGER_HOME=\$EMULATOR_TOOLS_HOME/bin \
-    PATH=\$PATH:\$JAVA_HOME:\$GRADLE_HOME:\$EMULATOR_HOME:\$EMULATOR_TOOLS_HOME:\$AVDMANAGER_HOME"
-
-for variable in ${ENVIRONMENT_VARIABLES}; do
-    echo export $variable >> .zshrc
-done
-
-source ~/.zshrc
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh; \
+    chmod 755 export-variables.sh; ./export-variables.sh)"
 
 # Setup SSH for a Git account
 # ssh-keygen
