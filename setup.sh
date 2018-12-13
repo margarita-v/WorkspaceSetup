@@ -10,14 +10,22 @@
 
 # Add user to sudoers
 
+sudo apt update
+
 # Install git, zsh, neovim, qemu-kvm, java8, aapt
-sudo apt install git zsh curl neovim qemu-kvm openjdk-8-jdk aapt -y
+sudo apt install git zsh curl wget neovim qemu-kvm openjdk-8-jdk aapt -y
 
 # Install and setup gradle
 wget https://services.gradle.org/distributions/gradle-5.0-bin.zip
 sudo mkdir /opt/gradle
 sudo unzip -d /opt/gradle gradle-5.0-bin.zip
 rm -rf gradle-5.0-bin.zip
+
+# Install Visual Studio Code
+sudo apt install software-properties-common apt-transport-https
+wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add -
+sudo add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main"
+sudo apt install code
 
 # Set neovim as default editor
 sudo update-alternatives --config editor
