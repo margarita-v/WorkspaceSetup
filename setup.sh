@@ -37,6 +37,9 @@ git config --global user.email $gitemail
 # Install Oh My Zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
+# ./export-variables.sh
+# Reboot your PC to apply changes
+
 # Setup SSH for a Git account
 # ssh-keygen
 # Add public key to Bitbucket account
