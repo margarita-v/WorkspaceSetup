@@ -5,11 +5,13 @@
 # use xprop for creation of ds-files
 
 sudo apt install devilspie -y
-mkdir -p ~/.devilspie
-cp android-studio.ds ~/.devilspie/android-studio.ds
+DEVILSPIE_DIR_NAME=$HOME/.devilspie
+mkdir -p ${DEVILSPIE_DIR_NAME}
+cp android-studio.ds ${DEVILSPIE_DIR_NAME}/android-studio.ds
 
 # create aliases for devilspie using
 cp .zsh_aliases ~/.zsh_aliases
+ZSHRC_FILE_NAME=$HOME/.zshrc
 echo "
 # Alias definitions.
 # You may want to put all your additions into a separate file like
@@ -19,11 +21,11 @@ echo "
 if [ -f ~/.zsh_aliases ]; then
     . ~/.zsh_aliases
 fi
-" >> ~/.zshrc
-. ~/.zshrc
+" >> ${ZSHRC_FILE_NAME}
+. ${ZSHRC_FILE_NAME}
 
 # create and activate startup script
-ANDROID_DEV_SETTINGS_DIR_NAME='~/.android-dev-setup'
+ANDROID_DEV_SETTINGS_DIR_NAME=$HOME/.android-dev-setup
 STARTUP_SCRIPT_FILE_NAME=${ANDROID_DEV_SETTINGS_DIR_NAME}/startup.sh
 mkdir -p ${ANDROID_DEV_SETTINGS_DIR_NAME}
 cp startup.sh ${STARTUP_SCRIPT_FILE_NAME}
