@@ -1,0 +1,8 @@
+; Simple script for moving Android Studio to the second workspace
+(if
+    (contains (window_property "WM_NAME") "Android Studio")
+    (begin
+        (set_workspace 2)
+        (maximize)
+    )
+)

@@ -1,6 +1,12 @@
 #!/usr/bin/zsh
 
+# Script for devilspie setup and autorun script activation
+
+# use xprop for creation of ds-files
+
 sudo apt install devilspie -y
+mkdir -p ~/.devilspie
+cp android-studio.ds ~/.devilspie/android-studio.ds
 
 cp .zsh_aliases ~/.zsh_aliases
 echo "
