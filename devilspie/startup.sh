@@ -2,17 +2,22 @@
 
 # Autorun script for initial system settings when user is logged in
 
-COMMAND="cd ~/AndroidStudioProjects/SampleProject && git pull"
+# List of commands which will be performed in separate terminal tabs
+declare -a COMMANDS_ARRAY=(\
+	"cd ~/WorkspaceSetup && git pull"\
+	"pwd"\
+)
 
-# create two terminal tabs
-# wmctrl -n 2
+get_part_of_terminal_command() {
+	: '
+		Function which returns command for one of the terminal tabs
+	'
+	echo ' --tab -e "sh -c \"'$@';zsh\""'
+}
 
-# Startup applicaitons
-# gnome-session-properties
-# OR:
-# firefox &
-# /usr/local/android-studio/bin/studio.sh &
-
-gnome-terminal --maximize \
-    --tab -e "sh -c \"$COMMAND;ls -la;zsh\"" \
-    --tab -e "sh -c \"pwd;zsh\""
+COMMAND="gnome-terminal --maximize "
+SIZE=`expr ${#COMMANDS_ARRAY[@]} - 1`
+for i in $(seq 0 $SIZE); do
+	COMMAND+=`get_part_of_terminal_command ${COMMANDS_ARRAY[i]}`
+done
+sh -c "$COMMAND"
