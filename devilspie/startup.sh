@@ -17,7 +17,7 @@ get_part_of_terminal_command() {
 
 COMMAND="gnome-terminal --maximize "
 SIZE=`expr ${#COMMANDS_ARRAY[@]} - 1`
-for i in $(seq 0 $SIZE); do
+for i in $(seq 0 ${SIZE}); do
 	COMMAND+=`get_part_of_terminal_command ${COMMANDS_ARRAY[i]}`
 done
 sh -c "$COMMAND"

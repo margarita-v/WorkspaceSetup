@@ -34,13 +34,13 @@ sudo update-alternatives --install /usr/bin/editor editor /usr/bin/vim 100
 
 # Grant permission to /dev/kvm. Log out and restart after this command
 # sudo usermod -aG sudo $USER
-sudo adduser $USER kvm
+sudo adduser ${USER} kvm
 
 # Git configuration
 read -p "Enter your name for a Git account: " gitname
 read -p "Enter your email for a Git account: " gitemail
-git config --global user.name $gitname
-git config --global user.email $gitemail
+git config --global user.name ${gitname}
+git config --global user.email ${gitemail}
 
 # Install Oh My Zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"

@@ -10,5 +10,5 @@ ENVIRONMENT_VARIABLES="JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64/ \
     PATH=\$PATH:\$JAVA_HOME:\$GRADLE_HOME:\$EMULATOR_HOME:\$EMULATOR_TOOLS_HOME:\$AVDMANAGER_HOME"
 
 for variable in ${ENVIRONMENT_VARIABLES}; do
-    echo export $variable >> ~/.zshrc
+    echo export ${variable} >> ~/.zshrc
 done
