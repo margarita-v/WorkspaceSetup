@@ -8,6 +8,7 @@ sudo apt install devilspie -y
 mkdir -p ~/.devilspie
 cp android-studio.ds ~/.devilspie/android-studio.ds
 
+# create aliases for devilspie using
 cp .zsh_aliases ~/.zsh_aliases
 echo "
 # Alias definitions.
@@ -21,6 +22,10 @@ fi
 " >> ~/.zshrc
 . ~/.zshrc
 
-cp startup.sh ~/startup.sh
-echo '
-~/startup.sh' >> ~/.profile
+# create and activate startup script
+ANDROID_DEV_SETTINGS_DIR_NAME='~/.android-dev-setup'
+STARTUP_SCRIPT_FILE_NAME=${ANDROID_DEV_SETTINGS_DIR_NAME}/startup.sh
+mkdir -p ${ANDROID_DEV_SETTINGS_DIR_NAME}
+cp startup.sh ${STARTUP_SCRIPT_FILE_NAME}
+echo "
+${STARTUP_SCRIPT_FILE_NAME}" >> ~/.profile
