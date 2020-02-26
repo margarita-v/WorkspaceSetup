@@ -20,3 +20,5 @@ TODO:
 * Groovy
 * Set jdk8 as default `sudo update-alternatives --config java`
 * [License](https://stackoverflow.com/questions/39760172/you-have-not-accepted-the-license-agreements-of-the-following-sdk-components)
+* [Thefuck](https://github.com/nvbn/thefuck)
+* Dart, Flutter ?
