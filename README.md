@@ -7,3 +7,15 @@ Using:
 * [Oh My Zsh](https://github.com/robbyrussell/oh-my-zsh)
 * [neovim](https://github.com/neovim/neovim)
 * emulator settings
+
+TODO:
+* Charles
+* Postman
+* Slack + [dark theme](https://github.com/LanikSJ/slack-dark-mode)
+* VSCode & plugins
+* Gimp
+* Skype
+* Firefox, Chrome extensions, Userstyles
+* Groovy
+* Set jdk8 as default `sudo update-alternatives --config java`
+* [License](https://stackoverflow.com/questions/39760172/you-have-not-accepted-the-license-agreements-of-the-following-sdk-components)
