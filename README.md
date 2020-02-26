@@ -6,6 +6,7 @@ Using:
 * zsh
 * [Oh My Zsh](https://github.com/robbyrussell/oh-my-zsh)
 * [neovim](https://github.com/neovim/neovim)
+* [Visual Studio Code](https://code.visualstudio.com/docs/setup/linux)
 * emulator settings
 
 TODO:
