@@ -35,6 +35,9 @@ sudo add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/v
 sudo apt install code -y
 sudo apt autoremove -y
 
+#Install postman
+sudo snap install postman
+
 # Set neovim as default editor
 sudo update-alternatives --install /usr/bin/editor editor /usr/bin/vim 100
 # or sudo update-alternatives --config editor
