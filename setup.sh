@@ -35,13 +35,16 @@ sudo add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/v
 sudo apt install code -y
 sudo apt autoremove -y
 
-#Install postman
+# Install postman
 sudo snap install postman
 
-#Install skype
+# Install skype
 wget https://go.skype.com/skypeforlinux-64.deb
 sudo apt install ./skypeforlinux-64.deb # sudo apt install skypeforlinux
 rm skypeforlinux-64.deb
+
+# Install Gimp if needed
+sudo apt install gimp
 
 # Set neovim as default editor
 sudo update-alternatives --install /usr/bin/editor editor /usr/bin/vim 100
