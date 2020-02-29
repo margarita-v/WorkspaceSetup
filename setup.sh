@@ -43,6 +43,11 @@ wget https://go.skype.com/skypeforlinux-64.deb
 sudo apt install ./skypeforlinux-64.deb # sudo apt install skypeforlinux
 rm skypeforlinux-64.deb
 
+# Install Slack
+wget https://downloads.slack-edge.com/linux_releases/slack-desktop-4.0.2-amd64.deb
+sudo apt install ./slack-desktop-*.deb
+rm -f ./slack-desktop-*.deb
+
 # Install Gimp if needed
 sudo apt install gimp
 
