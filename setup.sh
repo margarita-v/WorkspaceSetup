@@ -50,6 +50,9 @@ sudo apt install gimp
 sudo update-alternatives --install /usr/bin/editor editor /usr/bin/vim 100
 # or sudo update-alternatives --config editor
 
+# Optional, if another version of Java is present
+# sudo update-java-alternatives -s java-1.8.0-openjdk-amd64
+
 # Grant permission to /dev/kvm. Log out and restart after this command
 # sudo usermod -aG sudo $USER
 sudo adduser ${USER} kvm
