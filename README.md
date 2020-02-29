@@ -8,6 +8,7 @@ Using:
 * [neovim](https://github.com/neovim/neovim)
 * [Visual Studio Code](https://code.visualstudio.com/docs/setup/linux)
 * [Postman](https://learning.postman.com/docs/postman/launching-postman/installation-and-updates/#installing-postman-on-linux)
+* [Skype](https://www.cyberciti.biz/faq/how-to-install-skype-on-debian-linux-9/)
 * emulator settings
 
 TODO:
@@ -15,7 +16,6 @@ TODO:
 * Slack + [dark theme](https://github.com/LanikSJ/slack-dark-mode)
 * VSCode & plugins
 * Gimp
-* Skype
 * Firefox, Chrome extensions, Userstyles
 * Groovy
 * Set jdk8 as default `sudo update-alternatives --config java`

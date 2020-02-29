@@ -38,6 +38,11 @@ sudo apt autoremove -y
 #Install postman
 sudo snap install postman
 
+#Install skype
+wget https://go.skype.com/skypeforlinux-64.deb
+sudo apt install ./skypeforlinux-64.deb # sudo apt install skypeforlinux
+rm skypeforlinux-64.deb
+
 # Set neovim as default editor
 sudo update-alternatives --install /usr/bin/editor editor /usr/bin/vim 100
 # or sudo update-alternatives --config editor
