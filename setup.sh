@@ -10,6 +10,13 @@
 
 # Add user to sudoers
 
+# Possible error could be:
+# E: Could not get lock /var/lib/dpkg/lock – open (11: Resource temporarily unavailable)
+# E: Unable to lock the administration directory (/var/lib/dpkg/), is another process using it?
+# Possible solution:
+# ps aux | grep -i apt
+# sudo killall apt apt-get
+
 sudo apt update
 
 # Install git, zsh, neovim, qemu-kvm, java8, aapt
