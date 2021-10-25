@@ -112,8 +112,9 @@ export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64/
 #export JAVA_HOME=~/.sdkman/candidates/java/8.312.07.1-amznexport
 export GRADLE_HOME=/opt/gradle/gradle-4.10.2/bin
 export ANDROID_HOME=~/Android/Sdk
+export ADB_HOME=$ANDROID_HOME/platform-tools
 export EMULATOR_HOME=$ANDROID_HOME/emulator
 export EMULATOR_TOOLS_HOME=$ANDROID_HOME/tools
 export AVDMANAGER_HOME=$EMULATOR_TOOLS_HOME/bin
-export PATH=$PATH:$JAVA_HOME:$GRADLE_HOME:$EMULATOR_HOME:$EMULATOR_TOOLS_HOME:$AVDMANAGER_HOME
+export PATH=$PATH:$JAVA_HOME:$GRADLE_HOME:$ANDROID_HOME:$ADB_HOME:$EMULATOR_HOME:$EMULATOR_TOOLS_HOME:$AVDMANAGER_HOME
 export GRADLE_JAVA11=-Dorg.gradle.java.home\=$JAVA11_HOME
